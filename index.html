@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>mebeeサンプル</title>
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.5/dist/js/uikit-icons.min.js"></script>
+</head>
+<style>
+.main {
+  margin: 0 auto;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+</style>
+<script>
+
+function strCount() {
+	
+  //テキストボックスの値を取得
+  let val = document.getElementById("text-box").value;
+  //文字数取得
+  document.getElementById("text-box2").value = val.length;
+
+}
+
+</script>
+<body>
+  <div class="main">
+    <div class="uk-light uk-background-secondary uk-padding">
+
+      <form>
+        <fieldset class="uk-fieldset">
+            <legend class="uk-legend">文字数取得</legend>
+            <div class="uk-margin">
+              <input id="text-box2" class="uk-input" type="text" placeholder="Input">
+            </div>    
+        </fieldset>
+      </form>
+
+      <form>
+        <fieldset class="uk-fieldset">
+          <legend class="uk-legend">文字列を入力</legend>
+          <div class="uk-margin">
+            <input id="text-box" class="uk-input" type="text" placeholder="Input">
+          </div>    
+        </fieldset>
+      </form>
+
+      <p uk-margin>
+        <button class="uk-button uk-button-danger" onclick="strCount()">カウント</button>        
+      </p>
+
+    </div>
+  </div>
+</body>
+</html>
